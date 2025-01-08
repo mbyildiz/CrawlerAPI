@@ -91,7 +91,7 @@ class HepsiburadaCrawler:
             title = self.extract_title(soup)
             brand = self.extract_brand(soup)
             price = self.extract_price(soup)
-            description, img_descriptions = self.extract_description(soup)
+            description, img_descriptions, description_table = self.extract_description(soup)
             images = self.extract_images(soup)
             specs = self.extract_specifications(soup)
             
@@ -111,7 +111,8 @@ class HepsiburadaCrawler:
                 'price': price,
                 'raw_description': description,
                 'categories': self.extract_categories(soup),
-                'img_description': img_descriptions
+                'img_description': img_descriptions,
+                'description_table': description_table
             }
             
         except Exception as e:
@@ -176,6 +177,18 @@ class HepsiburadaCrawler:
     def extract_description(self, soup):
         description_parts = []
         img_descriptions = []
+        description_table = {}
+        
+        # İstenen içerikler listesi - Uzundan kısaya doğru sıralı
+        wanted_texts = [
+            "Akü Sayısı",  # Önce uzun olan eşleşmeleri kontrol et
+            "Maksimum Tork",
+            "Tork Ayarı",
+            "Türü",
+            "Volt",
+            "Akü",
+            "Amper"
+        ]
         
         # İstenmeyen içerikler listesi
         unwanted_texts = [
@@ -186,7 +199,17 @@ class HepsiburadaCrawler:
             "Seçenek",
             "Diğer",
             "Kombin ID",
-            "Hatalı içerik bildir"
+            "Hatalı içerik bildir",
+            "Taksit",
+            "Stok",
+            "Kargo",
+            "Teslimat",
+            "İade",
+            "Satıcı",
+            "Mağaza",
+            "Kampanya",
+            "Hediye",
+            "Puan"
         ]
         
         # Ürün açıklaması için selektörler
@@ -216,12 +239,24 @@ class HepsiburadaCrawler:
                     if src and not src.startswith('data:') and ('hepsiburada.net' in src or 'hepsiburada.com' in src):
                         img_descriptions.append(src)
                 
-                # İstenmeyen içerikleri kaldır
+                # İstenen içerikleri description_table'a ekle ve description'dan kaldır
                 for div in element.find_all('div'):
                     text_content = div.get_text(strip=True)
-                    # Eğer div içeriği istenmeyen metinlerden birini içeriyorsa
+                    
+                    # İstenen içerikleri kontrol et - tam eşleşme ara
+                    for wanted in wanted_texts:
+                        # Tam eşleşme kontrolü yap
+                        if text_content == wanted or text_content.strip(':') == wanted:
+                            next_div = div.find_next_sibling('div')
+                            if next_div:
+                                value = next_div.get_text(strip=True)
+                                description_table[wanted] = value
+                                next_div.decompose()
+                            div.decompose()
+                            break
+                    
+                    # İstenmeyen içerikleri kaldır
                     if any(unwanted in text_content for unwanted in unwanted_texts):
-                        # Hem bu div'i hem de bir sonraki div'i kaldır
                         next_div = div.find_next_sibling('div')
                         if next_div:
                             next_div.decompose()
@@ -248,11 +283,25 @@ class HepsiburadaCrawler:
                     
                     text = description_element.get_attribute('innerText')
                     if text:
-                        # İstenmeyen içerikleri metin bazlı temizle
+                        # İstenmeyen ve istenen içerikleri metin bazlı temizle
                         cleaned_text = text
+                        
+                        # İstenen içerikleri description_table'a ekle ve metinden kaldır
+                        for wanted in wanted_texts:
+                            if wanted in cleaned_text:
+                                lines = cleaned_text.split('\n')
+                                for i, line in enumerate(lines):
+                                    # Tam eşleşme kontrolü yap
+                                    if line.strip() == wanted or line.strip(':') == wanted:
+                                        if i < len(lines) - 1:
+                                            description_table[wanted] = lines[i + 1].strip()
+                                            lines[i] = ''
+                                            lines[i + 1] = ''
+                                cleaned_text = '\n'.join(filter(None, lines))
+                        
+                        # İstenmeyen içerikleri temizle
                         for unwanted in unwanted_texts:
                             if unwanted in cleaned_text:
-                                # İstenmeyen metni ve sonraki satırı kaldır
                                 parts = cleaned_text.split('\n')
                                 for i, part in enumerate(parts):
                                     if unwanted in part and i < len(parts) - 1:
@@ -279,7 +328,7 @@ class HepsiburadaCrawler:
             except Exception as e:
                 logging.error(f"Ekran görüntüsü alınırken hata: {str(e)}")
                 
-        return description, list(set(img_descriptions))
+        return description, list(set(img_descriptions)), description_table
 
     def extract_images(self, soup):
         images = set()
