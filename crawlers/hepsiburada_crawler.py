@@ -177,10 +177,20 @@ class HepsiburadaCrawler:
         description_parts = []
         img_descriptions = []
         
-        # Ürün açıklaması için selektörler - yeni ID'yi en başa ekleyelim
+        # İstenmeyen içerikler listesi
+        unwanted_texts = [
+            "Garanti Süresi (Ay)",
+            "Yurt Dışı Satış",
+            "Stok Kodu",
+            "Stok Adedi",
+            "Seçenek",
+            "Hatalı içerik bildir"
+        ]
+        
+        # Ürün açıklaması için selektörler
         selectors = [
-            'div#Description',  # Yeni eklenen ana seçici
-            'div[id="Description"]',  # Alternatif yazım
+            'div#Description',
+            'div[id="Description"]',
             'div#product-Description',
             'div[data-test-id="product-detail-description"]',
             'div[data-test-id="product-specs"]',
@@ -192,29 +202,37 @@ class HepsiburadaCrawler:
             '.product-information-content p'
         ]
         
-        # Önce sayfanın yüklenmesi için biraz daha bekleyelim
         time.sleep(3)
         
-        # BeautifulSoup ile içeriği almayı deneyelim
         for selector in selectors:
             elements = soup.select(selector)
             for element in elements:
-                # Önce resimleri ayıklayalım
+                # Resimleri ayıkla
                 images = element.find_all('img')
                 for img in images:
                     src = img.get('src')
                     if src and not src.startswith('data:') and ('hepsiburada.net' in src or 'hepsiburada.com' in src):
                         img_descriptions.append(src)
                 
+                # İstenmeyen içerikleri kaldır
+                for div in element.find_all('div'):
+                    text_content = div.get_text(strip=True)
+                    # Eğer div içeriği istenmeyen metinlerden birini içeriyorsa
+                    if any(unwanted in text_content for unwanted in unwanted_texts):
+                        # Hem bu div'i hem de bir sonraki div'i kaldır
+                        next_div = div.find_next_sibling('div')
+                        if next_div:
+                            next_div.decompose()
+                        div.decompose()
+                
                 text = element.get_text(separator='\n', strip=True)
                 if text:
                     description_parts.append(text)
                     logging.debug(f"Açıklama parçası bulundu ({selector}): {text[:100]}...")
         
-        # Eğer hala açıklama bulunamadıysa, Selenium ile direkt almayı deneyelim
+        # Selenium ile direkt almayı dene
         if not description_parts:
             try:
-                # Önce Description ID'li elementi deneyelim
                 description_element = WebDriverWait(self.driver, 10).until(
                     EC.presence_of_element_located((By.ID, "Description"))
                 )
@@ -228,8 +246,20 @@ class HepsiburadaCrawler:
                     
                     text = description_element.get_attribute('innerText')
                     if text:
-                        description_parts.append(text)
-                        logging.debug(f"Selenium ile Description ID'den açıklama bulundu: {text[:100]}...")
+                        # İstenmeyen içerikleri metin bazlı temizle
+                        cleaned_text = text
+                        for unwanted in unwanted_texts:
+                            if unwanted in cleaned_text:
+                                # İstenmeyen metni ve sonraki satırı kaldır
+                                parts = cleaned_text.split('\n')
+                                for i, part in enumerate(parts):
+                                    if unwanted in part and i < len(parts) - 1:
+                                        parts[i] = ''
+                                        parts[i + 1] = ''
+                                cleaned_text = '\n'.join(filter(None, parts))
+                    
+                    description_parts.append(cleaned_text)
+                    logging.debug(f"Selenium ile Description ID'den açıklama bulundu: {cleaned_text[:100]}...")
             except Exception as e:
                 logging.warning(f"Description ID'den açıklama alınırken hata: {str(e)}")
         
@@ -237,7 +267,7 @@ class HepsiburadaCrawler:
         
         if not description:
             logging.warning("Hiçbir açıklama bulunamadı!")
-            # Tüm içeriği debug için kaydet
+            # Debug için HTML'i kaydet
             with open('debug_description.html', 'w', encoding='utf-8') as f:
                 f.write(str(soup))
             
