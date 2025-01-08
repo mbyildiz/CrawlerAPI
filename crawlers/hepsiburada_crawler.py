@@ -89,18 +89,21 @@ class HepsiburadaCrawler:
             
             # Hepsiburada'ya özel selektörler
             title = self.extract_title(soup)
+            brand = self.extract_brand(soup)
             price = self.extract_price(soup)
             description, img_descriptions = self.extract_description(soup)
             images = self.extract_images(soup)
             specs = self.extract_specifications(soup)
             
             logging.info(f"Başlık: {title}")
+            logging.info(f"Marka: {brand}")
             logging.info(f"Fiyat: {price}")
             logging.info(f"Açıklama uzunluğu: {len(description)}")
             logging.info(f"Resim sayısı: {len(images)}")
             
             return {
                 'title': title,
+                'brand': brand,
                 'content': description,
                 'description': description,
                 'image_url': images[0] if images else None,
@@ -125,6 +128,7 @@ class HepsiburadaCrawler:
 
     def extract_title(self, soup):
         selectors = [
+            'h1[data-test-id="title"]',  # Yeni eklenen ana seçici
             'h1.product-name',
             'h1[data-test-id="product-name"]',
             '.product-detail-main h1'
@@ -136,6 +140,22 @@ class HepsiburadaCrawler:
                 logging.debug(f"Başlık bulundu ({selector}): {title}")
                 return title
         logging.warning("Başlık bulunamadı!")
+        return ''
+
+    def extract_brand(self, soup):
+        """Ürünün marka bilgisini çeker"""
+        selectors = [
+            'a[data-test-id="brand"]',
+            'span[data-test-id="brand"]',
+            '.brand-name'
+        ]
+        for selector in selectors:
+            element = soup.select_one(selector)
+            if element:
+                brand = element.text.strip()
+                logging.debug(f"Marka bulundu ({selector}): {brand}")
+                return brand
+        logging.warning("Marka bulunamadı!")
         return ''
 
     def extract_price(self, soup):
