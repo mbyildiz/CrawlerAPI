@@ -1,0 +1,320 @@
+2025-01-08 00:21:33,631 - DEBUG - Using proactor: IocpProactor
+2025-01-08 00:21:33,637 - INFO - Hepsiburada crawler baþlatýlýyor: https://www.hepsiburada.com/bosch-gsb-21-2-rct-profesyonel-1300-watt-elektrikli-darbeli-matkap-pm-hrboschgsb222rce
+2025-01-08 00:21:49,929 - WARNING - Baþlýk bulunamadý!
+2025-01-08 00:21:49,951 - DEBUG - Fiyat bulundu ([data-test-id="price-current-price"]): 10.474,83 TL
+2025-01-08 00:21:50,056 - WARNING - Ürün açýklamasý bulunamadý!
+2025-01-08 00:21:50,075 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/12/424-600/9070510768178.jpg
+2025-01-08 00:21:50,077 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/12/424-600/9070510768178.jpg
+2025-01-08 00:21:50,077 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/12/48-64/9070510768178.jpg
+2025-01-08 00:21:50,079 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/12/48-64/9070510768178.jpg
+2025-01-08 00:21:50,080 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/236/222-222/110000219767877.jpg
+2025-01-08 00:21:50,080 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/236/222-222/110000219767877.jpg
+2025-01-08 00:21:50,080 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/777/222-222/110000785146216.jpg
+2025-01-08 00:21:50,081 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/777/222-222/110000785146216.jpg
+2025-01-08 00:21:50,081 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/30/222-222/10281946153010.jpg
+2025-01-08 00:21:50,081 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/30/222-222/10281946153010.jpg
+2025-01-08 00:21:50,081 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/399/222-222/110000424706745.jpg
+2025-01-08 00:21:50,081 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/399/222-222/110000424706745.jpg
+2025-01-08 00:21:50,081 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/777/222-222/110000760543909.jpg
+2025-01-08 00:21:50,082 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/777/222-222/110000760543909.jpg
+2025-01-08 00:21:50,082 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/58/222-222/11330507505714.jpg
+2025-01-08 00:21:50,083 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/58/222-222/11330507505714.jpg
+2025-01-08 00:21:50,083 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/8/222-222/9064024277042.jpg
+2025-01-08 00:21:50,083 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/8/222-222/9064024277042.jpg
+2025-01-08 00:21:50,083 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/26/222-222/10164516356146.jpg
+2025-01-08 00:21:50,083 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/408/222-222/110000436312397.jpg
+2025-01-08 00:21:50,084 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/483/222-222/110000528166819.jpg
+2025-01-08 00:21:50,084 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/146/222-222/110000100947946.jpg
+2025-01-08 00:21:50,084 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/777/222-222/110000632989328.jpg
+2025-01-08 00:21:50,084 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/97/222-222/110000040296217.jpg
+2025-01-08 00:21:50,084 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/73/222-222/110000014750879.jpg
+2025-01-08 00:21:50,084 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/326/222-222/110000321961826.jpg
+2025-01-08 00:21:50,084 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/7/222-222/9774075281458.jpg
+2025-01-08 00:21:50,085 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/389/222-222/110000412367202.jpg
+2025-01-08 00:21:50,085 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/493/222-222/110000543497852.jpg
+2025-01-08 00:21:50,085 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/11/222-222/9070505951282.jpg
+2025-01-08 00:21:50,085 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/198/222-222/110000169210214.jpg
+2025-01-08 00:21:50,085 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/777/222-222/110000760543909.jpg
+2025-01-08 00:21:50,086 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/777/222-222/110000760543909.jpg
+2025-01-08 00:21:50,086 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/40/222-222/10678944301106.jpg
+2025-01-08 00:21:50,086 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/40/222-222/10678944301106.jpg
+2025-01-08 00:21:50,086 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/63/222-222/110000004601386.jpg
+2025-01-08 00:21:50,087 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/63/222-222/110000004601386.jpg
+2025-01-08 00:21:50,087 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/30/222-222/10281946153010.jpg
+2025-01-08 00:21:50,087 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/30/222-222/10281946153010.jpg
+2025-01-08 00:21:50,087 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/40/222-222/10678942367794.jpg
+2025-01-08 00:21:50,088 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/40/222-222/10678942367794.jpg
+2025-01-08 00:21:50,088 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/19/222-222/9845364064306.jpg
+2025-01-08 00:21:50,088 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/19/222-222/9845364064306.jpg
+2025-01-08 00:21:50,089 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/137/222-222/110000080278074.jpg
+2025-01-08 00:21:50,089 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/137/222-222/110000080278074.jpg
+2025-01-08 00:21:50,089 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/394/222-222/110000419184254.jpg
+2025-01-08 00:21:50,089 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/777/222-222/110000657922877.jpg
+2025-01-08 00:21:50,089 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/33/222-222/10420742815794.jpg
+2025-01-08 00:21:50,089 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/262/222-222/110000245647295.jpg
+2025-01-08 00:21:50,089 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/107/222-222/110000051000562.jpg
+2025-01-08 00:21:50,090 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/94/222-222/110000036762485.jpg
+2025-01-08 00:21:50,090 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/257/222-222/110000239926014.jpg
+2025-01-08 00:21:50,090 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/8/222-222/9100777390130.jpg
+2025-01-08 00:21:50,090 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/98/222-222/110000040797844.jpg
+2025-01-08 00:21:50,090 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/31/222-222/10327081713714.jpg
+2025-01-08 00:21:50,090 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/554/222-222/110000615840140.jpg
+2025-01-08 00:21:50,090 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/62/222-222/110000003658062.jpg
+2025-01-08 00:21:50,090 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/63/222-222/110000004584586.jpg
+2025-01-08 00:21:50,091 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/562/222-222/110000625009038.jpg
+2025-01-08 00:21:50,091 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/562/222-222/110000625009038.jpg
+2025-01-08 00:21:50,091 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/98/222-222/110000040797839.jpg
+2025-01-08 00:21:50,091 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/98/222-222/110000040797839.jpg
+2025-01-08 00:21:50,091 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/394/222-222/110000419184254.jpg
+2025-01-08 00:21:50,091 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/394/222-222/110000419184254.jpg
+2025-01-08 00:21:50,091 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/285/222-222/110000273530417.jpg
+2025-01-08 00:21:50,091 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/285/222-222/110000273530417.jpg
+2025-01-08 00:21:50,092 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/406/222-222/110000434395791.jpg
+2025-01-08 00:21:50,092 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/406/222-222/110000434395791.jpg
+2025-01-08 00:21:50,092 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/68/222-222/110000009716896.jpg
+2025-01-08 00:21:50,092 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/68/222-222/110000009716896.jpg
+2025-01-08 00:21:50,093 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/302/222-222/110000294352596.jpg
+2025-01-08 00:21:50,093 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/302/222-222/110000294352596.jpg
+2025-01-08 00:21:50,093 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/80/222-222/110000021803809.jpg
+2025-01-08 00:21:50,093 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/777/222-222/110000648286838.jpg
+2025-01-08 00:21:50,093 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/777/222-222/110000854428484.jpg
+2025-01-08 00:21:50,094 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/192/222-222/110000159573206.jpg
+2025-01-08 00:21:50,094 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/448/222-222/110000482874951.jpg
+2025-01-08 00:21:50,094 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/315/222-222/110000308389781.jpg
+2025-01-08 00:21:50,094 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/262/222-222/110000246192367.jpg
+2025-01-08 00:21:50,094 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/104/222-222/110000047067600.jpg
+2025-01-08 00:21:50,094 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/777/222-222/110000773473090.jpg
+2025-01-08 00:21:50,094 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/431/222-222/110000463922462.jpg
+2025-01-08 00:21:50,094 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/370/222-222/110000388217263.jpg
+2025-01-08 00:21:50,094 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/358/222-222/110000372339783.jpg
+2025-01-08 00:21:50,095 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/370/222-222/110000387041195.jpg
+2025-01-08 00:21:50,095 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/777/222-222/110000854261909.jpg
+2025-01-08 00:21:50,095 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/108/222-222/110000053197218.jpg
+2025-01-08 00:21:50,095 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/392/222-222/110000416580100.jpg
+2025-01-08 00:21:50,095 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/777/222-222/110000764553813.jpg
+2025-01-08 00:21:50,096 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/777/222-222/110000854428762.jpg
+2025-01-08 00:21:50,096 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/777/222-222/110000807833748.jpg
+2025-01-08 00:21:50,096 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/144/222-222/110000095068194.jpg
+2025-01-08 00:21:50,096 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/132/222-222/110000083261004.jpg
+2025-01-08 00:21:50,096 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/51/222-222/11083226218546.jpg
+2025-01-08 00:21:50,097 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/111/222-222/110000058697582.jpg
+2025-01-08 00:21:50,097 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/73/222-222/110000014750879.jpg
+2025-01-08 00:21:50,097 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/777/222-222/110000807833383.jpg
+2025-01-08 00:21:50,097 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/30/222-222/10292007010354.jpg
+2025-01-08 00:21:50,098 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/370/222-222/110000387241292.jpg
+2025-01-08 00:21:50,098 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/11/222-222/9060287184946.jpg
+2025-01-08 00:21:50,098 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/298/222-222/110000288411339.jpg
+2025-01-08 00:21:50,098 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/138/222-222/110000090425855.jpg
+2025-01-08 00:21:50,098 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/19/222-222/9845307637810.jpg
+2025-01-08 00:21:50,099 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/112/222-222/110000059350979.jpg
+2025-01-08 00:21:50,099 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/379/222-222/110000398000388.jpg
+2025-01-08 00:21:50,099 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/12/148-148/9070510768178.jpg
+2025-01-08 00:21:50,099 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/73/148-148/110000014750879.jpg
+2025-01-08 00:21:50,099 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/396/148-148/110000421655340.jpg
+2025-01-08 00:21:50,099 - DEBUG - Resim bulundu: https://productimages.hepsiburada.net/s/236/148-148/110000219767877.jpg
+2025-01-08 00:21:50,205 - INFO - Baþlýk: 
+2025-01-08 00:21:50,206 - INFO - Fiyat: 10.474,83 TL
+2025-01-08 00:21:50,207 - INFO - Açýklama uzunluðu: 0
+2025-01-08 00:21:50,207 - INFO - Resim sayýsý: 82
+2025-01-08 00:27:39,464 - DEBUG - Using proactor: IocpProactor
+2025-01-08 00:27:39,471 - INFO - Hepsiburada crawler baþlatýlýyor: https://www.hepsiburada.com/bosch-gsb-21-2-rct-profesyonel-1300-watt-elektrikli-darbeli-matkap-pm-hrboschgsb222rce
+2025-01-08 00:27:49,113 - INFO - ProductDescription elementi bulundu
+2025-01-08 00:27:51,005 - WARNING - Baþlýk bulunamadý!
+2025-01-08 00:27:51,035 - DEBUG - Fiyat bulundu ([data-test-id="price-current-price"]): 10.474,83 TL
+2025-01-08 00:27:51,057 - DEBUG - Açýklama parçasý bulundu ([data-test-id="ProductDescription"]): Bosch GSB 21-2 RCT-Profesyonel 1300 Watt Elektrikli Darbeli Matkap
+Fonksiyonlar
+2 vites
+Sað/sol dönü...
+2025-01-08 00:27:51,149 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/12/424-600/9070510768178.jpg
+2025-01-08 00:27:51,149 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/12/424-600/9070510768178.jpg
+2025-01-08 00:27:51,149 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/12/48-64/9070510768178.jpg
+2025-01-08 00:27:51,149 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/12/48-64/9070510768178.jpg
+2025-01-08 00:27:51,149 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/12/424-600/9070510768178.jpg/format:webp
+2025-01-08 00:27:51,161 - INFO - Baþlýk: 
+2025-01-08 00:27:51,161 - INFO - Fiyat: 10.474,83 TL
+2025-01-08 00:27:51,162 - INFO - Açýklama uzunluðu: 482
+2025-01-08 00:27:51,162 - INFO - Resim sayýsý: 3
+2025-01-08 00:32:23,319 - DEBUG - Using proactor: IocpProactor
+2025-01-08 00:32:23,323 - INFO - Hepsiburada crawler baþlatýlýyor: https://www.hepsiburada.com/bosch-professional-gbh-2-26-dre-kirici-delici-pm-hrboschgbh226
+2025-01-08 00:32:34,665 - INFO - ProductDescription elementi bulundu
+2025-01-08 00:32:36,764 - WARNING - Baþlýk bulunamadý!
+2025-01-08 00:32:36,789 - DEBUG - Fiyat bulundu ([data-test-id="price-current-price"]): 5.435,78 TL
+2025-01-08 00:32:36,874 - DEBUG - Ham ProductDescription içeriði: <div data-test-id="ProductDescription"><div><link href="https://images.hepsiburada.net/assets/sfvoltranstatic/v.1.1.1185/project/assets/ProductDescription.css" media="all" onload="this.media='all';" rel="stylesheet"/></div><div><link href="https://images.hepsiburada.net/assets/sfvoltranstatic/v.1.1.1185/project/assets/client.css" media="all" onload="this.media='all';" rel="stylesheet"/></div><div class="container" style="margin-bottom:0">
+<div>
+<div class="sf-voltran-body voltran-body full ProductDescription" id="ProductDescription_ffaed778-c968-4506-e09f-99469a2e3af1" style="pointer-events: auto;" voltran-hydrated="true"><div><div class="sf-ProductDescription-ELfL1tuePGs5IVj8XHGy sf-ProductDescription-tYca0g5oi89GEwAF2LCe productDescriptionContent"><div><div class="container contain-lg-5 contain-md-4 contain-sm-5"> <div class="row"> <div class="col lg-5 md-5 sm-5" style="text-align:center;"> <img src="https://images.hepsiburada.net/assets/EE/ProductDesc/0611253703.jpg" style="display:inline-block;"/> </div> </div></div><div id="ctl00_ContentPlaceHolder1_ProductControl1_MainControl1_TabControl1_ProductDescription1_CustomContentBottom"></div><div class="cnet-integration" id="ccs-inline-content"></div></div><div id="ctl00_ContentPlaceHolder1_ProductControl1_MainControl1_TabControl1_ProductDescription1_CustomContentBottom"></div><div class="cnet-integration" id="ccs-inline-content"></div></div></div></div></div></div></div>
+2025-01-08 00:32:36,926 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/18/424-600/9793028063282.jpg
+2025-01-08 00:32:36,927 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/18/424-600/9793028063282.jpg
+2025-01-08 00:32:36,927 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/7/424-600/9070505066546.jpg
+2025-01-08 00:32:36,927 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/7/424-600/9070504902706.jpg
+2025-01-08 00:32:36,928 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/7/424-600/9070504935474.jpg
+2025-01-08 00:32:36,928 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/7/424-600/9070504968242.jpg
+2025-01-08 00:32:36,928 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/18/48-64/9793028063282.jpg
+2025-01-08 00:32:36,928 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/18/48-64/9793028063282.jpg
+2025-01-08 00:32:36,928 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/7/48-64/9070505066546.jpg
+2025-01-08 00:32:36,929 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/7/48-64/9070505066546.jpg
+2025-01-08 00:32:36,929 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/7/48-64/9070504902706.jpg
+2025-01-08 00:32:36,929 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/7/48-64/9070504902706.jpg
+2025-01-08 00:32:36,930 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/7/48-64/9070504935474.jpg
+2025-01-08 00:32:36,930 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/7/48-64/9070504935474.jpg
+2025-01-08 00:32:36,930 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/7/48-64/9070504968242.jpg
+2025-01-08 00:32:36,930 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/7/48-64/9070504968242.jpg
+2025-01-08 00:32:36,930 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/18/424-600/9793028063282.jpg/format:webp
+2025-01-08 00:32:36,938 - INFO - Baþlýk: 
+2025-01-08 00:32:36,938 - INFO - Fiyat: 5.435,78 TL
+2025-01-08 00:32:36,938 - INFO - Açýklama uzunluðu: 0
+2025-01-08 00:32:36,938 - INFO - Resim sayýsý: 11
+2025-01-08 00:34:29,776 - DEBUG - Using proactor: IocpProactor
+2025-01-08 00:34:29,781 - INFO - Hepsiburada crawler baþlatýlýyor: https://www.hepsiburada.com/bosch-easyimpact-600-darbeli-matkap-0603133000-pm-HBC000004ZROR
+2025-01-08 00:34:40,931 - INFO - ProductDescription elementi bulundu
+2025-01-08 00:34:42,157 - WARNING - Baþlýk bulunamadý!
+2025-01-08 00:34:42,171 - DEBUG - Fiyat bulundu ([data-test-id="price-current-price"]): 1.747,99 TL
+2025-01-08 00:34:42,186 - DEBUG - Açýklama parçasý bulundu ([data-test-id="ProductDescription"]): Bosch EasyImpact 600 Darbeli Matkap - 0603133000
+EasyImpact 600
+YENÝ
+Çeþitli malzemelerde hassas del...
+2025-01-08 00:34:42,296 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/73/424-600/110000014750879.jpg
+2025-01-08 00:34:42,296 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/73/424-600/110000014750879.jpg
+2025-01-08 00:34:42,296 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/73/424-600/110000014750880.jpg
+2025-01-08 00:34:42,296 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/73/424-600/110000014750881.jpg
+2025-01-08 00:34:42,296 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/73/424-600/110000014750882.jpg
+2025-01-08 00:34:42,297 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/318/424-600/110000311896866.jpg
+2025-01-08 00:34:42,297 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/318/424-600/110000311896867.jpg
+2025-01-08 00:34:42,297 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/318/424-600/110000311896868.jpg
+2025-01-08 00:34:42,298 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/73/48-64/110000014750879.jpg
+2025-01-08 00:34:42,298 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/73/48-64/110000014750879.jpg
+2025-01-08 00:34:42,298 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/73/48-64/110000014750880.jpg
+2025-01-08 00:34:42,299 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/73/48-64/110000014750880.jpg
+2025-01-08 00:34:42,299 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/73/48-64/110000014750881.jpg
+2025-01-08 00:34:42,299 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/73/48-64/110000014750881.jpg
+2025-01-08 00:34:42,299 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/73/48-64/110000014750882.jpg
+2025-01-08 00:34:42,300 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/73/48-64/110000014750882.jpg
+2025-01-08 00:34:42,300 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/318/48-64/110000311896866.jpg
+2025-01-08 00:34:42,300 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/318/48-64/110000311896866.jpg
+2025-01-08 00:34:42,300 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/318/48-64/110000311896867.jpg
+2025-01-08 00:34:42,301 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/318/48-64/110000311896867.jpg
+2025-01-08 00:34:42,301 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/318/48-64/110000311896868.jpg
+2025-01-08 00:34:42,301 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/73/424-600/110000014750879.jpg/format:webp
+2025-01-08 00:34:42,312 - INFO - Baþlýk: 
+2025-01-08 00:34:42,312 - INFO - Fiyat: 1.747,99 TL
+2025-01-08 00:34:42,313 - INFO - Açýklama uzunluðu: 2038
+2025-01-08 00:34:42,313 - INFO - Resim sayýsý: 15
+2025-01-08 00:36:14,737 - DEBUG - Using proactor: IocpProactor
+2025-01-08 00:36:14,743 - INFO - Hepsiburada crawler baþlatýlýyor: https://www.hepsiburada.com/bosch-gsb-600-darbeli-matkap-100-parca-aksesuar-pm-HBC0000581IYG
+2025-01-08 00:36:24,932 - INFO - ProductDescription elementi bulundu
+2025-01-08 00:36:25,891 - WARNING - Baþlýk bulunamadý!
+2025-01-08 00:36:25,910 - DEBUG - Fiyat bulundu ([data-test-id="price-current-price"]): 2.716,74 TL
+2025-01-08 00:36:25,925 - DEBUG - Açýklama parçasý bulundu ([data-test-id="ProductDescription"]): Bosch GSB 600 Darbeli Matkap + 100 Parça Aksesuar
+Özellikler
+• Ýdeal performans için güçlü 600 W mot...
+2025-01-08 00:36:25,995 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/493/424-600/110000543497852.jpg
+2025-01-08 00:36:25,996 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/493/424-600/110000543497852.jpg
+2025-01-08 00:36:25,996 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/493/424-600/110000543497853.jpg
+2025-01-08 00:36:25,996 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/493/424-600/110000543497854.jpg
+2025-01-08 00:36:25,996 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/493/48-64/110000543497852.jpg
+2025-01-08 00:36:25,997 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/493/48-64/110000543497852.jpg
+2025-01-08 00:36:25,997 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/493/48-64/110000543497853.jpg
+2025-01-08 00:36:25,997 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/493/48-64/110000543497853.jpg
+2025-01-08 00:36:25,997 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/493/48-64/110000543497854.jpg
+2025-01-08 00:36:25,998 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/493/48-64/110000543497854.jpg
+2025-01-08 00:36:25,998 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/493/424-600/110000543497852.jpg/format:webp
+2025-01-08 00:36:26,004 - INFO - Baþlýk: 
+2025-01-08 00:36:26,004 - INFO - Fiyat: 2.716,74 TL
+2025-01-08 00:36:26,004 - INFO - Açýklama uzunluðu: 807
+2025-01-08 00:36:26,004 - INFO - Resim sayýsý: 7
+2025-01-08 00:40:13,258 - DEBUG - Using proactor: IocpProactor
+2025-01-08 00:40:13,263 - INFO - Hepsiburada crawler baþlatýlýyor: https://www.hepsiburada.com/bosch-25-li-pro-vidalama-seti-2607017037-pm-HB00000WQZEQ
+2025-01-08 00:40:22,748 - INFO - ProductDescription elementi bulundu
+2025-01-08 00:40:23,606 - WARNING - Baþlýk bulunamadý!
+2025-01-08 00:40:23,615 - DEBUG - Fiyat bulundu ([data-test-id="price-current-price"]): 437,34 TL
+2025-01-08 00:40:23,628 - DEBUG - Açýklama parçasý bulundu ([data-test-id="ProductDescription"]): Bosch 25'li Pro Vidalama Seti - 2607017037
+BOSCH 25'LÝ PRO VÝDALAMA SETÝ - 2607017037
+25mm Uçlar :
+P...
+2025-01-08 00:40:23,699 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/42/424-600/10742357655602.jpg
+2025-01-08 00:40:23,701 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/42/424-600/10742357655602.jpg
+2025-01-08 00:40:23,702 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/42/48-64/10742357655602.jpg
+2025-01-08 00:40:23,702 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/42/48-64/10742357655602.jpg
+2025-01-08 00:40:23,703 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/42/424-600/10742357655602.jpg/format:webp
+2025-01-08 00:40:23,714 - INFO - Baþlýk: 
+2025-01-08 00:40:23,714 - INFO - Fiyat: 437,34 TL
+2025-01-08 00:40:23,715 - INFO - Açýklama uzunluðu: 220
+2025-01-08 00:40:23,715 - INFO - Resim sayýsý: 3
+2025-01-08 08:39:53,632 - DEBUG - Using proactor: IocpProactor
+2025-01-08 08:39:53,636 - INFO - Hepsiburada crawler baþlatýlýyor: https://www.hepsiburada.com/bosch-25-li-pro-vidalama-seti-2607017037-pm-HB00000WQZEQ
+2025-01-08 08:40:04,148 - INFO - ProductDescription elementi bulundu
+2025-01-08 08:40:05,118 - WARNING - Baþlýk bulunamadý!
+2025-01-08 08:40:05,133 - DEBUG - Fiyat bulundu ([data-test-id="price-current-price"]): 437,34 TL
+2025-01-08 08:40:05,146 - DEBUG - Açýklama parçasý bulundu ([data-test-id="ProductDescription"]): Bosch 25'li Pro Vidalama Seti - 2607017037
+BOSCH 25'LÝ PRO VÝDALAMA SETÝ - 2607017037
+25mm Uçlar :
+P...
+2025-01-08 08:40:05,217 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/42/424-600/10742357655602.jpg
+2025-01-08 08:40:05,217 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/42/424-600/10742357655602.jpg
+2025-01-08 08:40:05,219 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/42/48-64/10742357655602.jpg
+2025-01-08 08:40:05,219 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/42/48-64/10742357655602.jpg
+2025-01-08 08:40:05,219 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/42/424-600/10742357655602.jpg/format:webp
+2025-01-08 08:40:05,222 - INFO - Baþlýk: 
+2025-01-08 08:40:05,228 - INFO - Fiyat: 437,34 TL
+2025-01-08 08:40:05,228 - INFO - Açýklama uzunluðu: 220
+2025-01-08 08:40:05,228 - INFO - Resim sayýsý: 3
+2025-01-08 09:40:14,020 - DEBUG - Using proactor: IocpProactor
+2025-01-08 09:40:14,023 - INFO - ====== WebDriver manager ======
+2025-01-08 09:40:14,730 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-08 09:40:14,730 - DEBUG - Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2025-01-08 09:40:14,985 - DEBUG - https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 9069
+2025-01-08 09:40:15,002 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-08 09:40:15,003 - DEBUG - Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2025-01-08 09:40:15,294 - DEBUG - https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 9069
+2025-01-08 09:40:15,309 - INFO - Driver [C:\Users\mbyil\.wdm\drivers\chromedriver\win64\131.0.6778.264\chromedriver-win32/chromedriver.exe] found in cache
+2025-01-08 09:40:15,311 - DEBUG - Skipping Selenium Manager; path to chrome driver specified in Service class: C:\Users\mbyil\.wdm\drivers\chromedriver\win64\131.0.6778.264\chromedriver-win32/chromedriver.exe
+2025-01-08 09:40:15,321 - DEBUG - Started executable: `C:\Users\mbyil\.wdm\drivers\chromedriver\win64\131.0.6778.264\chromedriver-win32/chromedriver.exe` in a child process with pid: 21120 using 0 to output -3
+2025-01-08 09:40:15,827 - DEBUG - POST http://localhost:49837/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'goog:chromeOptions': {'extensions': [], 'args': ['--headless', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage', '--window-size=1920,1080', '--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36']}}}}
+2025-01-08 09:40:15,828 - DEBUG - Starting new HTTP connection (1): localhost:49837
+2025-01-08 09:40:16,383 - DEBUG - http://localhost:49837 "POST /session HTTP/1.1" 200 0
+2025-01-08 09:40:16,383 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"131.0.6778.205","chrome":{"chromedriverVersion":"131.0.6778.264 (2d05e31515360f4da764174f7c448b33e36da871-refs/branch-heads/6778@{#4323})","userDataDir":"C:\\Users\\mbyil\\AppData\\Local\\Temp\\scoped_dir21120_1531948699"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:49840"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"6357e87528eda70bea9617e32499fc22"}} | headers=HTTPHeaderDict({'Content-Length': '884', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-08 09:40:16,383 - DEBUG - Finished Request
+2025-01-08 09:40:16,383 - INFO - Hepsiburada crawler baþlatýlýyor: https://www.hepsiburada.com/bosch-25-li-pro-vidalama-seti-2607017037-pm-HB00000WQZEQ
+2025-01-08 09:40:16,383 - DEBUG - POST http://localhost:49837/session/6357e87528eda70bea9617e32499fc22/url {'url': 'https://www.hepsiburada.com/bosch-25-li-pro-vidalama-seti-2607017037-pm-HB00000WQZEQ'}
+2025-01-08 09:40:17,869 - DEBUG - http://localhost:49837 "POST /session/6357e87528eda70bea9617e32499fc22/url HTTP/1.1" 200 0
+2025-01-08 09:40:17,869 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-08 09:40:17,870 - DEBUG - Finished Request
+2025-01-08 09:40:22,879 - DEBUG - POST http://localhost:49837/session/6357e87528eda70bea9617e32499fc22/execute/sync {'script': 'window.scrollTo(0, document.body.scrollHeight);', 'args': []}
+2025-01-08 09:40:22,884 - DEBUG - http://localhost:49837 "POST /session/6357e87528eda70bea9617e32499fc22/execute/sync HTTP/1.1" 200 0
+2025-01-08 09:40:22,884 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-08 09:40:22,884 - DEBUG - Finished Request
+2025-01-08 09:40:24,887 - DEBUG - POST http://localhost:49837/session/6357e87528eda70bea9617e32499fc22/element {'using': 'css selector', 'value': '[data-test-id="ProductDescription"]'}
+2025-01-08 09:40:25,052 - DEBUG - http://localhost:49837 "POST /session/6357e87528eda70bea9617e32499fc22/element HTTP/1.1" 200 0
+2025-01-08 09:40:25,052 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.2A04DE7561A2FC3041A1CFAE8F3EB843.d.DD8408FEC13F4A86108FD9C45FD17B4C.e.117"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-08 09:40:25,053 - DEBUG - Finished Request
+2025-01-08 09:40:25,053 - INFO - ProductDescription elementi bulundu
+2025-01-08 09:40:25,053 - DEBUG - GET http://localhost:49837/session/6357e87528eda70bea9617e32499fc22/source {}
+2025-01-08 09:40:25,119 - DEBUG - http://localhost:49837 "GET /session/6357e87528eda70bea9617e32499fc22/source HTTP/1.1" 200 0
+2025-01-08 09:40:31,385 - DEBUG - Finished Request
+2025-01-08 09:40:31,489 - WARNING - Baþlýk bulunamadý!
+2025-01-08 09:40:31,499 - DEBUG - Fiyat bulundu ([data-test-id="price-current-price"]): 437,34 TL
+2025-01-08 09:40:31,512 - DEBUG - Açýklama parçasý bulundu ([data-test-id="ProductDescription"]): Bosch 25'li Pro Vidalama Seti - 2607017037
+BOSCH 25'LÝ PRO VÝDALAMA SETÝ - 2607017037
+25mm Uçlar :
+P...
+2025-01-08 09:40:31,580 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/42/424-600/10742357655602.jpg
+2025-01-08 09:40:31,581 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/42/424-600/10742357655602.jpg
+2025-01-08 09:40:31,581 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/42/48-64/10742357655602.jpg
+2025-01-08 09:40:31,582 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/42/48-64/10742357655602.jpg
+2025-01-08 09:40:31,582 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/42/424-600/10742357655602.jpg/format:webp
+2025-01-08 09:40:31,582 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/42/148-148/10742357655602.jpg
+2025-01-08 09:40:31,583 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/51/148-148/11083226218546.jpg
+2025-01-08 09:40:31,583 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/508/148-148/110000562338826.jpg
+2025-01-08 09:40:31,583 - DEBUG - Resim bulundu (img[src*="productimages.hepsiburada.net"]): https://productimages.hepsiburada.net/s/777/148-148/110000793233610.jpg
+2025-01-08 09:40:31,589 - INFO - Baþlýk: 
+2025-01-08 09:40:31,590 - INFO - Fiyat: 437,34 TL
+2025-01-08 09:40:31,590 - INFO - Açýklama uzunluðu: 220
+2025-01-08 09:40:31,590 - INFO - Resim sayýsý: 7
+2025-01-08 09:40:31,610 - DEBUG - DELETE http://localhost:49837/session/6357e87528eda70bea9617e32499fc22 {}
+2025-01-08 09:40:31,662 - DEBUG - http://localhost:49837 "DELETE /session/6357e87528eda70bea9617e32499fc22 HTTP/1.1" 200 0
+2025-01-08 09:40:31,662 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-01-08 09:40:31,662 - DEBUG - Finished Request
+2025-01-08 09:40:33,746 - ERROR - Hata oluþtu: object dict can't be used in 'await' expression
+Traceback (most recent call last):
+  File "C:\Users\mbyil\Desktop\Cursor projeler\Crawl4AI ile  Wordpress api\test_crawler.py", line 29, in test_crawler
+    content = await crawler.crawl()
+TypeError: object dict can't be used in 'await' expression
