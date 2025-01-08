@@ -446,11 +446,34 @@ class HepsiburadaCrawler:
         return image_list
 
     def extract_categories(self, soup):
-        categories = []
-        breadcrumb = soup.select('.breadcrumb a')
-        if breadcrumb:
-            categories = [a.text.strip() for a in breadcrumb[1:] if a.text.strip()]
-        return categories or ['Elektronik']
+        try:
+            categories = {'main_category': 'Elektronik', 'sub_category': ''}
+            
+            # Son breadcrumb öğesini bul
+            last_breadcrumb = soup.find('span', {'data-test-id': 'breadcrumb-last-item'})
+            if last_breadcrumb:
+                # Alt kategoriyi kaydet
+                categories['sub_category'] = last_breadcrumb.text.strip()
+                
+                # Son breadcrumb'ın li etiketini bul
+                last_li = last_breadcrumb.find_parent('li')
+                if last_li:
+                    # Bir önceki li etiketini bul
+                    prev_li = last_li.find_previous_sibling('li')
+                    if prev_li:
+                        # Ana kategoriyi al
+                        category = prev_li.find('span')
+                        if category:
+                            categories['main_category'] = category.text.strip()
+            
+            if not categories['main_category'] and not categories['sub_category']:
+                logging.warning("Hiçbir kategori bulunamadı, varsayılan kategoriler döndürülüyor.")
+            
+            return categories
+            
+        except Exception as e:
+            logging.error(f"Kategori çekilirken hata oluştu: {str(e)}")
+            return {'main_category': 'Elektronik', 'sub_category': ''}
 
     def extract_specifications(self, soup):
         specs = []
