@@ -39,3 +39,8 @@ crawler.log
 # OS
 .DS_Store
 Thumbs.db 
+
+# Debug files
+debug_page.html
+debug_description.html
+error_screenshot.png 

@@ -203,7 +203,7 @@ class HepsiburadaCrawler:
                 images = element.find_all('img')
                 for img in images:
                     src = img.get('src')
-                    if src and not src.startswith('data:'):
+                    if src and not src.startswith('data:') and ('hepsiburada.net' in src or 'hepsiburada.com' in src):
                         img_descriptions.append(src)
                 
                 text = element.get_text(separator='\n', strip=True)
@@ -223,7 +223,7 @@ class HepsiburadaCrawler:
                     images = description_element.find_elements(By.TAG_NAME, "img")
                     for img in images:
                         src = img.get_attribute('src')
-                        if src and not src.startswith('data:'):
+                        if src and not src.startswith('data:') and ('hepsiburada.net' in src or 'hepsiburada.com' in src):
                             img_descriptions.append(src)
                     
                     text = description_element.get_attribute('innerText')
