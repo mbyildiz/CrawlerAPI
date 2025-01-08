@@ -43,4 +43,5 @@ Thumbs.db
 # Debug files
 debug_page.html
 debug_description.html
-error_screenshot.png 
+error_screenshot.png
+debug_screenshot.png 
