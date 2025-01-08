@@ -184,6 +184,8 @@ class HepsiburadaCrawler:
             "Stok Kodu",
             "Stok Adedi",
             "Seçenek",
+            "Diğer",
+            "Kombin ID",
             "Hatalı içerik bildir"
         ]
         
@@ -346,4 +348,4 @@ class HepsiburadaCrawler:
                 cols = row.select('td')
                 if len(cols) == 2:
                     specs.append(f"{cols[0].text.strip()}: {cols[1].text.strip()}")
-        return '\n'.join(specs) 
+        return '\n'.join(specs)
