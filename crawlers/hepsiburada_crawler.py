@@ -250,7 +250,11 @@ class HepsiburadaCrawler:
             "Materyal",
             "EN Standartı",
             "Astar malzemesi",
-            "Kaplama malzemesi"
+            "Kaplama malzemesi",
+            "Mandren Tipi",
+            "Mandren Ölçüsü (mm)",
+            "Mandren Çapı (mm)",
+            "Mandren Uzunluğu (mm)"
         ]
         
         # İstenmeyen içerikler listesi
