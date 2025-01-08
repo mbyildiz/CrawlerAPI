@@ -104,12 +104,10 @@ class HepsiburadaCrawler:
             return {
                 'title': title,
                 'brand': brand,
-                'content': description,
                 'description': description,
                 'image_url': images[0] if images else None,
                 'additional_images': images[1:],
                 'price': price,
-                'raw_description': description,
                 'categories': self.extract_categories(soup),
                 'img_description': img_descriptions,
                 'description_table': description_table
