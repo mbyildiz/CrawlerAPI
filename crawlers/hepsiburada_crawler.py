@@ -252,22 +252,44 @@ class HepsiburadaCrawler:
     def extract_images(self, soup):
         images = set()
         
-        selectors = [
-            '[data-test-id="product-image"] img[src]',
-            '[data-test-id="carousel-image"] img[src]',
-            '[data-test-id="product-gallery"] img[src]',
-            'img[src*="productimages.hepsiburada.net"]'
-        ]
-        
-        for selector in selectors:
-            for img in soup.select(selector):
+        # Carousel slide'larını kontrol et
+        slide_index = 0
+        while True:
+            slide_selector = f'[id="pdp-carousel__slide{slide_index}"] img'
+            slide_images = soup.select(slide_selector)
+            
+            if not slide_images:
+                break
+                
+            for img in slide_images:
                 src = img.get('src') or img.get('data-src')
                 if src and 'http' in src and not src.startswith('data:'):
                     src = src.split('?')[0]
                     if '_org_zoom' not in src:
                         src = src.replace('_small', '_org_zoom')
                     images.add(src)
-                    logging.debug(f"Resim bulundu ({selector}): {src}")
+                    logging.debug(f"Carousel resmi bulundu (slide {slide_index}): {src}")
+            
+            slide_index += 1
+        
+        # Eğer carousel'dan resim bulunamazsa, diğer selektörleri dene
+        if not images:
+            selectors = [
+                '[data-test-id="product-image"] img[src]',
+                '[data-test-id="carousel-image"] img[src]',
+                '[data-test-id="product-gallery"] img[src]',
+                'img[src*="productimages.hepsiburada.net"]'
+            ]
+            
+            for selector in selectors:
+                for img in soup.select(selector):
+                    src = img.get('src') or img.get('data-src')
+                    if src and 'http' in src and not src.startswith('data:'):
+                        src = src.split('?')[0]
+                        if '_org_zoom' not in src:
+                            src = src.replace('_small', '_org_zoom')
+                        images.add(src)
+                        logging.debug(f"Resim bulundu ({selector}): {src}")
         
         if not images:
             logging.warning("Hiç resim bulunamadı!")
@@ -276,7 +298,8 @@ class HepsiburadaCrawler:
             for img in all_images[:5]:
                 logging.debug(f"Image tag: {str(img)}")
         
-        return list(images)
+        image_list = list(images)
+        return image_list
 
     def extract_categories(self, soup):
         categories = []
