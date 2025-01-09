@@ -254,7 +254,8 @@ class HepsiburadaCrawler:
             "Mandren Tipi",
             "Mandren Ölçüsü (mm)",
             "Mandren Çapı (mm)",
-            "Mandren Uzunluğu (mm)"
+            "Mandren Uzunluğu (mm)",
+            "Miktar"
         ]
         
         # İstenmeyen içerikler listesi
