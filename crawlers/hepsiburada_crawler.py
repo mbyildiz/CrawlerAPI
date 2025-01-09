@@ -10,6 +10,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 import re
+from config.settings import HEPSIBURADA_SETTINGS as settings
+from config.text_patterns import HEPSIBURADA_PATTERNS as patterns
 
 class HepsiburadaCrawler:
     def __init__(self, url):
@@ -19,16 +21,17 @@ class HepsiburadaCrawler:
     def setup_driver(self):
         """Selenium WebDriver'ı yapılandır"""
         chrome_options = Options()
-        chrome_options.add_argument('--headless')  # Başsız mod
+        if settings['headless']:
+            chrome_options.add_argument('--headless')
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--disable-dev-shm-usage')
-        chrome_options.add_argument('--window-size=1920,1080')
+        chrome_options.add_argument(f'--window-size={settings["window_size"][0]},{settings["window_size"][1]}')
         chrome_options.add_argument('--disable-blink-features=AutomationControlled')
         chrome_options.add_argument('--disable-extensions')
         chrome_options.add_argument('--disable-notifications')
         chrome_options.add_argument('--ignore-certificate-errors')
-        chrome_options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+        chrome_options.add_argument(f'--user-agent={settings["user_agent"]}')
         
         # WebDriver'ı başlat
         service = Service(ChromeDriverManager().install())
@@ -51,30 +54,40 @@ class HepsiburadaCrawler:
             self.driver.get(self.url)
             
             # Sayfanın yüklenmesini bekle
-            time.sleep(5)
+            time.sleep(settings['page_load_wait'])
             
-            # Scroll işlemi - sayfanın tamamını yüklemek için birkaç kez scroll yapalım
-            for _ in range(3):
+            # Scroll işlemi
+            last_height = self.driver.execute_script("return document.body.scrollHeight")
+            while True:
+                # Sayfanın belirli bir oranına kadar scroll yap
+                self.driver.execute_script(f"window.scrollTo(0, document.body.scrollHeight * {settings['scroll_step_ratio']});")
+                time.sleep(settings['scroll_wait'])
+                # Sayfanın sonuna scroll yap
                 self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                time.sleep(2)
+                time.sleep(settings['scroll_wait'])
+                
+                new_height = self.driver.execute_script("return document.body.scrollHeight")
+                if new_height == last_height:
+                    break
+                last_height = new_height
             
             # En başa dön
             self.driver.execute_script("window.scrollTo(0, 0);")
-            time.sleep(2)
+            time.sleep(settings['scroll_wait'])
             
             # Ürün detayları sekmesine tıkla (varsa)
             try:
                 # Önce Description ID'li elementi bulmayı dene
-                description_element = WebDriverWait(self.driver, 5).until(
+                description_element = WebDriverWait(self.driver, settings['element_wait']).until(
                     EC.presence_of_element_located((By.ID, "Description"))
                 )
                 if not description_element.is_displayed():
                     # Detay sekmesini bul ve tıkla
-                    detail_tab = WebDriverWait(self.driver, 5).until(
+                    detail_tab = WebDriverWait(self.driver, settings['element_wait']).until(
                         EC.presence_of_element_located((By.CSS_SELECTOR, 'button[data-test-id="product-detail-tab"]'))
                     )
                     detail_tab.click()
-                    time.sleep(3)
+                    time.sleep(settings['detail_tab_wait'])
             except Exception as e:
                 logging.warning(f"Detay sekmesi işlemleri sırasında hata: {str(e)}")
             
@@ -85,8 +98,9 @@ class HepsiburadaCrawler:
             soup = BeautifulSoup(html_content, 'html.parser')
             
             # Debug için HTML'i kaydet
-            with open('debug_page.html', 'w', encoding='utf-8') as f:
-                f.write(str(soup.prettify()))
+            if settings['save_debug_html']:
+                with open(settings['debug_file_path'], 'w', encoding='utf-8') as f:
+                    f.write(str(soup.prettify()))
             
             # Hepsiburada'ya özel selektörler
             title = self.extract_title(soup)
@@ -182,97 +196,10 @@ class HepsiburadaCrawler:
             """Metinleri uzunluklarına göre azalan şekilde sıralar"""
             return sorted(text_list, key=len, reverse=True)
         
-        # İstenen içerikler listesi - Uzundan kısaya doğru sıralı
-        wanted_texts = sort_by_length_desc([
-            "Akü Sayısı",
-            "Testere Bıçağı Çapı",
-            "Maksimum Tork",
-            "Tork Ayarı",
-            "Türü",
-            "Volt",
-            "Akü",
-            "Amper",
-            "Ahşap Delme Çapı",
-            "Çelik Delme Çapı",
-            "Delme Derinliği",
-            "Delme Çapı",
-            "Güç (W)",
-            "Darbe Gücü (Joule)",
-            "Boşta Maksimum Devir Sayısı (Devir/dk)",
-            "Ağırlık",
-            "Maksimum Darbe Sayısı (Darbe/dk)",
-            "Metal Delme Çapı",
-            "Beton Delme Çapı",
-            "Akü Bilgisi",
-            "Çalışma Şekli",
-            "Çalışma Süresi",
-            "Çalışma Sıcaklığı",
-            "Çalışma Basıncı",
-            "Çalışma Hızı",
-            "Renk",
-            "Uygulama Yüzeyi",
-            "Toz Emme",
-            "Hız Ayarı",
-            "Çanta",
-            "Taşıma Kapasitesi",
-            "Katlanabilir",
-            "Malzeme",
-            "Teker Tipi",
-            "Disk Çapı",
-            "Devir Ayarı",
-            "Watt Değeri",
-            "Devir",
-            "Aksesuar Seti",
-            "Aksesuar",
-            "Ahşap Kesme (mm)",
-            "Metal Kesme (mm)",
-            "Türü",
-            "Kaldıraç",
-            "Kaldırma Kapasitesi",
-            "Elektrot Çapı",
-            "Çapı",
-            "Maksimum Güç (kVA)",
-            "Minimum Akım Değeri",
-            "Ağırlık (kg)",
-            "Ürün Çeşiti",
-            "Güvenlik Standardı",
-            "Malzeme",
-            "Dış Taban",
-            "WRU",
-            "Su Geçirmez",
-            "Koruma Sınıfı",
-            "Materyal",
-            "EN Standartı",
-            "Astar malzemesi",
-            "Kaplama malzemesi",
-            "Mandren Tipi",
-            "Mandren Ölçüsü (mm)",
-            "Mandren Çapı (mm)",
-            "Mandren Uzunluğu (mm)",
-            "Miktar"
-        ])
-        
-        # İstenmeyen içerikler listesi
-        unwanted_texts = sort_by_length_desc([
-            "Garanti Süresi (Ay)",
-            "Yurt Dışı Satış",
-            "Stok Kodu",
-            "Stok Adedi",
-            "Seçenek",
-            "Diğer",
-            "Kombin ID",
-            "Hatalı içerik bildir",
-            "Taksit",
-            "Stok",
-            "Kargo",
-            "Teslimat",
-            "İade",
-            "Satıcı",
-            "Mağaza",
-            "Kampanya",
-            "Hediye",
-            "Puan"
-        ])
+        # İstenen ve istenmeyen içerikleri config'den al ve uzunluğa göre sırala
+        wanted_texts = sort_by_length_desc(patterns['wanted_texts'])
+        unwanted_texts = sort_by_length_desc(patterns['unwanted_texts'])
+        unwanted_phrases = sort_by_length_desc(patterns['unwanted_phrases'])
         
         # Ürün açıklaması için selektörler
         selectors = [
@@ -378,53 +305,7 @@ class HepsiburadaCrawler:
         
         description = '\n\n'.join(filter(None, description_parts))
         
-        # İstenmeyen kelimeleri ve ifadeleri temizle - Uzundan kısaya sıralı
-        unwanted_phrases = sort_by_length_desc([
-            "Satın aldığınız ürünün orijinal olduğunu gösteren",
-            "Satın aldığınız ürünün orijinal olduğunu",
-            "Satın aldığınız ürünün",
-            "Ürünün orijinal olduğunu gösteren",
-            "Ürünün orijinal olduğunu",
-            "Ürün özellikleri",
-            "Ürünün",
-            "Ürünlerimiz",
-            "Ürünümüz",
-            "Ürünler",
-            "Ürün",
-            "Fiyat",
-            "Fiyatı",
-            "Fiyatlar",
-            "Kampanya",
-            "Kampanyalı",
-            "İndirim",
-            "İndirimli",
-            "Stok",
-            "Stokta",
-            "Stoklarımızda",
-            "Kargo",
-            "Kargoya",
-            "Kargoyla",
-            "Teslimat",
-            "Teslim",
-            "Taksit",
-            "Taksitli",
-            "Garanti",
-            "Garantili",
-            "Orijinal",
-            "Orjinal",
-            "Mağaza",
-            "Mağazamız",
-            "Satıcı",
-            "Satış",
-            "Satışta",
-            "Hediye",
-            "Hediyeli",
-            "Puan",
-            "Puanlı",
-            "Hatalı içerik bildir"
-        ])
-        
-        # Her bir istenmeyen ifadeyi tam eşleşme ile temizle
+        # İstenmeyen kelimeleri ve ifadeleri temizle
         for phrase in unwanted_phrases:
             # Regex pattern oluştur: tam eşleşme için phrase'i escape et
             pattern = re.escape(phrase)
