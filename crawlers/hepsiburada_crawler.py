@@ -9,6 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import time
+import re
 
 class HepsiburadaCrawler:
     def __init__(self, url):
@@ -177,9 +178,14 @@ class HepsiburadaCrawler:
         img_descriptions = []
         description_table = {}
         
+        def sort_by_length_desc(text_list):
+            """Metinleri uzunluklarına göre azalan şekilde sıralar"""
+            return sorted(text_list, key=len, reverse=True)
+        
         # İstenen içerikler listesi - Uzundan kısaya doğru sıralı
-        wanted_texts = [
-            "Akü Sayısı",  # Önce uzun olan eşleşmeleri kontrol et
+        wanted_texts = sort_by_length_desc([
+            "Akü Sayısı",
+            "Testere Bıçağı Çapı",
             "Maksimum Tork",
             "Tork Ayarı",
             "Türü",
@@ -188,10 +194,6 @@ class HepsiburadaCrawler:
             "Amper",
             "Ahşap Delme Çapı",
             "Çelik Delme Çapı",
-            "Delme Derinliği",
-            "Delme Çapı",
-            "Delme Derinliği",
-            "Delme Çapı",
             "Delme Derinliği",
             "Delme Çapı",
             "Güç (W)",
@@ -207,15 +209,8 @@ class HepsiburadaCrawler:
             "Çalışma Sıcaklığı",
             "Çalışma Basıncı",
             "Çalışma Hızı",
-            "Çalışma Sıcaklığı",
-            "Çalışma Basıncı",
-            "Çalışma Hızı",
-            "Çalışma Sıcaklığı",
-            "Çalışma Basıncı",
-            "Çalışma Hızı",
             "Renk",
             "Uygulama Yüzeyi",
-            "Çalışma Sıcaklığı",
             "Toz Emme",
             "Hız Ayarı",
             "Çanta",
@@ -223,7 +218,6 @@ class HepsiburadaCrawler:
             "Katlanabilir",
             "Malzeme",
             "Teker Tipi",
-            "Taşıma Kapasitesi",
             "Disk Çapı",
             "Devir Ayarı",
             "Watt Değeri",
@@ -256,10 +250,10 @@ class HepsiburadaCrawler:
             "Mandren Çapı (mm)",
             "Mandren Uzunluğu (mm)",
             "Miktar"
-        ]
+        ])
         
         # İstenmeyen içerikler listesi
-        unwanted_texts = [
+        unwanted_texts = sort_by_length_desc([
             "Garanti Süresi (Ay)",
             "Yurt Dışı Satış",
             "Stok Kodu",
@@ -278,7 +272,7 @@ class HepsiburadaCrawler:
             "Kampanya",
             "Hediye",
             "Puan"
-        ]
+        ])
         
         # Ürün açıklaması için selektörler
         selectors = [
@@ -383,6 +377,70 @@ class HepsiburadaCrawler:
                 logging.warning(f"Description ID'den açıklama alınırken hata: {str(e)}")
         
         description = '\n\n'.join(filter(None, description_parts))
+        
+        # İstenmeyen kelimeleri ve ifadeleri temizle - Uzundan kısaya sıralı
+        unwanted_phrases = sort_by_length_desc([
+            "Satın aldığınız ürünün orijinal olduğunu gösteren",
+            "Satın aldığınız ürünün orijinal olduğunu",
+            "Satın aldığınız ürünün",
+            "Ürünün orijinal olduğunu gösteren",
+            "Ürünün orijinal olduğunu",
+            "Ürün özellikleri",
+            "Ürünün",
+            "Ürünlerimiz",
+            "Ürünümüz",
+            "Ürünler",
+            "Ürün",
+            "Fiyat",
+            "Fiyatı",
+            "Fiyatlar",
+            "Kampanya",
+            "Kampanyalı",
+            "İndirim",
+            "İndirimli",
+            "Stok",
+            "Stokta",
+            "Stoklarımızda",
+            "Kargo",
+            "Kargoya",
+            "Kargoyla",
+            "Teslimat",
+            "Teslim",
+            "Taksit",
+            "Taksitli",
+            "Garanti",
+            "Garantili",
+            "Orijinal",
+            "Orjinal",
+            "Mağaza",
+            "Mağazamız",
+            "Satıcı",
+            "Satış",
+            "Satışta",
+            "Hediye",
+            "Hediyeli",
+            "Puan",
+            "Puanlı",
+            "Hatalı içerik bildir"
+        ])
+        
+        # Her bir istenmeyen ifadeyi tam eşleşme ile temizle
+        for phrase in unwanted_phrases:
+            # Regex pattern oluştur: tam eşleşme için phrase'i escape et
+            pattern = re.escape(phrase)
+            # Önce ve sonrasında boşluk, noktalama işareti veya satır sonu olabilir
+            pattern = f'(?:^|[\\s.,;!?]){pattern}(?:[\\s.,;!?]|$)'
+            description = re.sub(pattern, ' ', description, flags=re.IGNORECASE | re.MULTILINE)
+        
+        # Fazladan boşlukları ve satır sonlarını temizle
+        description = '\n'.join(line.strip() for line in description.split('\n') if line.strip())
+        
+        # Ardışık boş satırları tek satıra indir
+        description = re.sub(r'\n\s*\n', '\n', description)
+        
+        # Fazladan boşlukları temizle
+        description = re.sub(r'\s+', ' ', description)
+        description = description.strip()
         
         if not description:
             logging.warning("Hiçbir açıklama bulunamadı!")
